@@ -1,0 +1,67 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  max-width: 320px;
+  border: 1px solid;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.fieldWrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  margin-bottom: 24px;
+}
+
+.field {
+  padding: 8px 8px;
+  border: 1px solid;
+  border-radius: 4px;
+  outline: transparent;
+  transition: all 200ms ease-in;
+
+  &:hover {
+    border: 1px solid rgb(0, 55, 255);
+  }
+  &:focus-visible {
+    background-color: #fff;
+    border: 1px solid blue;
+    outline: 1px solid blue;
+  }
+}
+
+.btn {
+  max-width: 120px;
+  margin: 0 auto;
+  padding: 8px 20px;
+  border-radius: 4px;
+  border: 1px solid #2e6deb;
+  outline: transparent;
+  background-color: #fff;
+  color: #2e6deb;
+
+  transition: all 150ms linear;
+
+  &:hover {
+    background-color: #2e6deb;
+    color: #fff;
+  }
+
+  &:focus-visible {
+    outline: 1px solid #2e6deb;
+    background-color: #2e6deb;
+    color: #fff;
+  }
+}
+
+.error {
+  position: absolute;
+  top: 60px;
+  left: 4px;
+  font-size: 12px;
+  color: red;
+}
