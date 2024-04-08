@@ -21,6 +21,14 @@ export default function App() {
         ];
   });
 
+  useEffect(() => {
+    window.localStorage.setItem("contacts", JSON.stringify(contacts));
+  }, [contacts]);
+
+  function handleSearch(evt) {
+    setSearchValue(evt.target.value);
+  }
+
   const deleteContact = (contactId) => {
     setContacts((prevTasks) => {
       return prevTasks.filter((task) => task.id !== contactId);
@@ -38,14 +46,6 @@ export default function App() {
     ]);
 
     actions.resetForm();
-  }
-
-  useEffect(() => {
-    window.localStorage.setItem("contacts", JSON.stringify(contacts));
-  }, [contacts]);
-
-  function handleSearch(evt) {
-    setSearchValue(evt.target.value);
   }
 
   const filteredContacts = contacts.filter((contact) =>
