@@ -54,7 +54,7 @@ export default function ContactForm({ onAdd }) {
           <ErrorMessage className={css.error} name="number" component="span" />
         </div>
 
-        <button className={css.btn} type="submit" onSubmit={onAdd}>
+        <button className={css.btn} type="submit">
           Add contact
         </button>
       </Form>
